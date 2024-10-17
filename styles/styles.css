@@ -6,8 +6,20 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4c3;
+    background-color: #f0f4f8;
     color: #333;
+    margin: 0;
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+p {
+    line-height: 1.7;
+}
+
+li {
+    line-height: 1.7;
 }
 
 header {
@@ -66,14 +78,15 @@ section p {
 }
 
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 2rem; /* Espacio entre las categorías */
 }
 
 .skills-category {
-    flex: 1 1 calc(33.33% - 2rem);
-    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skills-category h3 {
@@ -140,7 +153,7 @@ footer {
 }
 
 .project:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     background-color: #ffe082;
 }
@@ -148,3 +161,19 @@ footer {
 .project h3 {
     color: #f57f17;
 }
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
