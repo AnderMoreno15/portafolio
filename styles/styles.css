@@ -5,33 +5,48 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    color: #e0e0e0;
     margin: 0;
-    padding: 0;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 0 10%;
+    background: linear-gradient(-45deg, #1e1e1e, #333, #1c1c3e, #2b2b59);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+    line-height: 1.6;
 }
 
-p {
-    line-height: 1.7;
+/* Animación de fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
+
+p,
 li {
     line-height: 1.7;
 }
 
 header {
-    background-color: #388e3c;
-    color: #fff;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
     padding: 2rem;
     text-align: center;
+    border-bottom: 1px solid #333;
 }
 
 header h1 {
     font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.1);
 }
 
 header p {
@@ -47,40 +62,37 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #f5f5f5;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffeb3b;
+    color: #b3e5fc;
 }
 
 section {
     padding: 3rem 1.5rem;
     margin: 2rem 0;
-    background-color: #f5f5f5;
+    background-color: #181818;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 section h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
-    color: #388e3c;
-    border-bottom: 2px solid #ff5722;
+    color: #b3e5fc;
+    border-bottom: 2px solid #64b5f6;
     padding-bottom: 0.5rem;
-}
-
-section p {
-    margin-bottom: 1rem;
 }
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 2rem; /* Espacio entre las categorías */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas */
+    gap: 2rem;
 }
 
 .skills-category {
@@ -92,8 +104,8 @@ section p {
 .skills-category h3 {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    color: #388e3c;
-    border-bottom: 2px solid #ff5722;
+    color: #81d4fa;
+    border-bottom: 2px solid #64b5f6;
     padding-bottom: 0.5rem;
 }
 
@@ -104,62 +116,35 @@ section p {
 }
 
 .skills-list span {
-    background-color: #81c784;
+    background-color: #333;
+    color: #e0e0e0;
     padding: 0.5rem;
     border-radius: 5px;
-    transition: none;
     text-align: center;
-    cursor: default;
 }
 
 .project {
-    background-color: #ffd54f;
+    background-color: #212121;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.3s ease;
-}
-
-.project h3 {
-    color: #f57f17;
-}
-
-#contact {
-    text-align: center;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #388e3c;
-    color: #fff;
-}
-
-/* Estilos para animar los proyectos */
-.project.animate_animated {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.project {
-    background-color: #ffd54f;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    opacity: 0;
     transition: opacity 0.5s ease, transform 0.3s ease;
     cursor: pointer;
+    opacity: 0;
+}
+
+.project.animate_animated {
+    opacity: 1;
 }
 
 .project:hover {
-    transform: scale(1.01);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    background-color: #ffe082;
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    background-color: #333;
 }
 
 .project h3 {
-    color: #f57f17;
+    color: #90caf9;
 }
 
 .gallery {
@@ -173,7 +158,13 @@ footer {
     width: 100%;
     max-width: 600px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
     cursor: pointer;
 }
 
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+}
