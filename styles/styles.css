@@ -142,6 +142,28 @@ section h2 {
     color: #90caf9;
 }
 
+/*Animaciones*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate_animated {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+.animate_fadeInUp {
+    animation-name: fadeInUp;
+}
+
+
 /* Galería */
 .gallery {
     display: flex;
