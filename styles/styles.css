@@ -133,7 +133,7 @@ section h2 {
 }
 
 .project:hover {
-    transform: scale(1.02);
+    transform: scale(1.02) !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     background-color: #292929;
 }
@@ -141,28 +141,6 @@ section h2 {
 .project h3 {
     color: #90caf9;
 }
-
-/*Animaciones*/
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate_animated {
-    animation-duration: 0.8s;
-    animation-fill-mode: both;
-}
-
-.animate_fadeInUp {
-    animation-name: fadeInUp;
-}
-
 
 /* Galería */
 .gallery {
